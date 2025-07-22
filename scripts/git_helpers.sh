@@ -168,7 +168,7 @@ smart_commit() {
 # Check commit message format
 check_commit_format() {
     local commit_msg=$1
-    if [[ ! $commit_msg =~ ^(feat|fix|docs|style|refactor|perf|test|chore)(\(.+\))?: .+ ]]; then
+    if [[ ! $commit_msg =~ ^(feat|fix|docs|style|refactor|perf|test|chore)(\(.+\))?\:.+ ]]; then
         log_error "Commit message doesn't follow conventional format"
         log_info "Expected format: type(scope): description"
         log_info "Example: feat(churn): add customer behavior analyzer"
